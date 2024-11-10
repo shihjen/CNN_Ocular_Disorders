@@ -5,7 +5,33 @@
 ![fundus_cataract](assets/images/fundus_cataract.png)
 ![fundus_glaucoma](assets/images/fundus_glaucoma.png)
 
+### Repo Directory
+---
+
+```
+CNN_Ocular_Disorders/
+├── data/
+│   ├── eye_test.csv
+│   └── eye_train.csv
+│   └── eye_val.csv
+├── learning_history/
+|   ├── enetb3.csv
+|   └── inceptionv3.csv
+|   └── resnet.csv
+|   └── xception.csv
+├── notebooks/
+|   ├── Data Splitting.ipynb
+|   └── EfficientNetB3.ipynb
+|   └── InceptionV3.ipynb
+|   └── ResNet50.ipynb
+|   └── Xception.ipynb
+|   └── Models Evaluation & Comparison.ipynb
+├── README.md
+└── requirements.txt
+```
+
 ### Background
+---
 
 <p>
   Ocular disorders constitute a significant global health issue, affecting millions and imposing substantial economic burdens. 
@@ -23,16 +49,17 @@
   In Singapore, around 10% of the population is affected by glaucoma, with up to 50% of these cases remaining undiagnosed<sup>3</sup>. 
   Globally, approximately 35.4% of individuals with diabetes develop diabetic retinopathy (DR), with about one-third of these cases advancing to vision-threatening stages<sup>4</sup>. 
   In Singapore, diabetes is an increasing public health concern, affecting roughly 1 in 12 people between 18 and 69 years of age—over 400,000 individuals in total<sup>5</sup>. 
-  Diabetic retinopathy is the most prevalent microvascular complication of diabetes, emphasizing the urgent need for effective screening and management. 
+  DR is the most prevalent microvascular complication of diabetes, emphasizing the urgent need for effective screening and management. 
   Prevalence rates for DR and vision-threatening DR in Singapore are particularly high compared to other Asian countries, at 33.9% and 8.9%, respectively<sup>4</sup>.
   
   The economic impact of visual impairment is profound, with an estimated annual productivity loss of about $411 billion globally<sup>1</sup>. 
-  The integration of deep learning (DL) techniques in medical imaging has transformed diagnosis and disease management. 
+  The integration of deep learning techniques in medical imaging has transformed diagnosis and disease management. 
   Deep learning algorithms have shown promise in diagnosing major eye disorders, including diabetic retinopathy, cataracts, glaucoma, and age-related macular degeneration<sup>6,7,8</sup>. 
   These algorithms can analyze vast amounts of imaging data to identify patterns indicative of disease progression, thereby supporting ophthalmologists in making informed decisions.
 </p>
 
 ### Objective
+---
 
 <p>
   To develop an algorithm that accurately distinguishes diabetic retinopathy, glaucoma, and cataracts from normal eye images using a deep learning approach. 
@@ -41,6 +68,7 @@
 </p>
 
 ### Potential Use Cases
+---
 
 <p>
   The trained classifier holds significant potential for automating large-scale population screening for eye disorders that may lead to vision impairment, including diabetic retinopathy, glaucoma, and cataracts. 
@@ -54,6 +82,7 @@
 </p>
 
 ### The Dataset
+---
 
 <p>
   The dataset used in this project is an open-source collection obtained from Kaggle, consisting of a total of 4,217 fundus images categorized into four classes: diabetic retinopathy, glaucoma, cataract, and normal. 
@@ -67,6 +96,7 @@
 </p>
 
 ### Data Preprocessing
+---
 
 <p>
   All images were rescaled to a pixel intensity range of 0 to 1 to normalize the input data. 
@@ -76,6 +106,7 @@
 </p>
 
 ### Model Architecture
+---
 
 <p>
   In this project, the Convolutional Neural Network (CNN) was developed to classify fundus images into four categories: cataract, glaucoma, diabetic retinopathy, and normal eyes. 
@@ -102,6 +133,7 @@
 </p>
 
 ### Results
+---
 
 <p>
   The accuracy of the four models—EfficientNetB3 (93.84%), ResNet50 (93.84%), Xception (93.68%), and InceptionV3 (93.36%) - showed no substantial differences on the test dataset. 
@@ -169,20 +201,33 @@
 
 #### Images in Test Dataset Failed to Classify by All Models
   ![all_failed_images](assets/images/allfailed_test.png)
-  <i>Figure 5. Images in test dataset failed to classify by all models.</i>
+  <i>Figure 5. The images in the test dataset could not be classified by any of the models.</i>
 
 </p>
 
-
+### Conclusion
+---
+<p>
+  The proposed models demonstrate the effectiveness of Convolutional Neural Networks (CNNs) in predicting various eye disorders using fundus images, achieving an overall accuracy of 94%. 
+  All four models exhibited high accuracy in distinguishing diabetic retinopathy from other ocular disorders and normal eyes. 
+  However, future work is needed to enhance the performance of these models in detecting glaucoma. 
+  This could involve incorporating images with more pronounced abnormalities, distortions, and specific features associated with glaucoma. Several limitations exist within the models proposed in this project. 
+  Notably, they cannot identify the co-occurrence of multiple eye disorders or categorize ocular conditions into different grades or stages. 
+  Future research may include the application of image segmentation techniques to pinpoint abnormal regions within fundus images, thereby improving diagnostic precision. 
+  Additionally, exploring more sophisticated network architectures could further enhance model performance. Expanding the dataset to include other imaging modalities, such as Optical Coherence Tomography (OCT) images, 
+  may also provide valuable insights and improve the robustness of the classification system. 
+  In summary, while the current models show promising results in classifying eye disorders, ongoing improvements and adaptations will be essential for advancing their diagnostic capabilities and clinical utility.
+</p>
 
 ### References
+---
 
 1. [Blindness and vision impairment – World Health Organization (WHO).](https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment)
 2. [Cataract – National University of Hospital (NUH).](https://www.nuh.com.sg/care-at-nuh/outcome-of-our-care/cataract#:~:text=In%20Singapore%2C%20the%20percentage%20of,people%2075%20years%20and%20older)
 3. [Glaucoma: Eye Under Pressure – Singapore National Eye Centre.](https://www.snec.com.sg/singvision-issue1-2022-glaucoma-eye-under-pressure#:~:text=In%20Singapore%2C%20glaucoma%20affects%20approximately,may%20not%20have%20any%20symptoms)
-4. Neelam K, Aung KCY, Ang K, Tavintharan S, Sum CF, Lim SC. Association of Triglyceride Glucose Index with Prevalence and Incidence of Diabetic Retinopathy in a Singaporean Population. Clin Ophthalmol. 2023;17:445-454
+4. [Neelam K, Aung KCY, Ang K, Tavintharan S, Sum CF, Lim SC. Association of Triglyceride Glucose Index with Prevalence and Incidence of Diabetic Retinopathy in a Singaporean Population. Clin Ophthalmol. 2023;17:445-454](https://pubmed.ncbi.nlm.nih.gov/36755892/)
 5. [Diabetic Retinopathy: Updates in Detection and Treatment - Singapore National Eye Centre, SingHealth.](https://www.singhealth.com.sg/news/medical-news/updates-in-detection-and-treatment-of-diabetic-retinopathy)
-6. Ting, D. S. W., Cheung, C. Y., Lim, G., Tan, G. S. W., Quang, N. D., Gan, A., Hamzah, H., Garcia-Franco, R., San Yeo, I. Y., Lee, S. Y., Wong, E. Y. M., Sabanayagam, C., Baskaran, M., Ibrahim, F., Tan, N. C., Finkelstein, E. A., Lamoureux, E. L., Wong, I. Y., Bressler, N. M., Sivaprasad, S., … Wong, T. Y. (2017). Development and Validation of a Deep Learning System for Diabetic Retinopathy and Related Eye Diseases Using Retinal Images From Multiethnic Populations With Diabetes. JAMA, 318(22), 2211–2223.
-7. Sarki, R., Ahmed, K., Wang, H., & Zhang, Y. (2020). Automated detection of mild and multi-class diabetic eye diseases using deep learning. Health information science and systems, 8(1), 32.
-8. K. Prasad, P. S. Sajith, M. Neema, L. Madhu and P. N. Priya, "Multiple eye disease detection using Deep Neural Network," TENCON 2019 - 2019 IEEE Region 10 Conference (TENCON), Kochi, India, 2019, pp. 2148-2153.
+6. [Ting, D. S. W., Cheung, C. Y., Lim, G., Tan, G. S. W., Quang, N. D., Gan, A., Hamzah, H., Garcia-Franco, R., San Yeo, I. Y., Lee, S. Y., Wong, E. Y. M., Sabanayagam, C., Baskaran, M., Ibrahim, F., Tan, N. C., Finkelstein, E. A., Lamoureux, E. L., Wong, I. Y., Bressler, N. M., Sivaprasad, S., … Wong, T. Y. (2017). Development and Validation of a Deep Learning System for Diabetic Retinopathy and Related Eye Diseases Using Retinal Images From Multiethnic Populations With Diabetes. JAMA, 318(22), 2211–2223.](https://pubmed.ncbi.nlm.nih.gov/29234807/)
+7. [Sarki, R., Ahmed, K., Wang, H., & Zhang, Y. (2020). Automated detection of mild and multi-class diabetic eye diseases using deep learning. Health information science and systems, 8(1), 32.](https://pubmed.ncbi.nlm.nih.gov/33088488/)
+8. [K. Prasad, P. S. Sajith, M. Neema, L. Madhu and P. N. Priya, "Multiple eye disease detection using Deep Neural Network," TENCON 2019 - 2019 IEEE Region 10 Conference (TENCON), Kochi, India, 2019, pp. 2148-2153.](https://ieeexplore.ieee.org/document/8929666)
 

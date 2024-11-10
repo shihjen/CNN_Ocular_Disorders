@@ -124,7 +124,7 @@
 | Overall Accuracy     |           0.9384 |        0.9368 |     0.9336 |     0.9384 |
 
   ![ROC](assets/images/roc_curve.png)
-  <i>Figure 2. Receiver Operating Characteristic (ROC) Curves.</i>
+  <i>Figure 2. Receiver Operating Characteristic (ROC) curves.</i>
 
 #### Receiver Operating Characteristic Area Under the Curve
   <i>Table 2. AUC values.</i>
@@ -137,7 +137,7 @@
 
 #### Precision Recall Curve  
   ![Precision-Recall-Curve](assets/images/precision_recall_curve.png)
-  <i>Figure 3. Precision Recall Curves.</i>
+  <i>Figure 3. Precision-recall curves.</i>
   
   <i>Table 3. Average precision values.</i>
   |                      |   EfficientNetB3 |   InceptionV3 |   Xception |   ResNet50 |
@@ -165,6 +165,11 @@
 
 #### Confusion Matrix
   ![Confusion_Matrix](assets/images/confusion_matrix.png)
+  <i>Figure 4. Confusion matrix.</i>
+
+#### Images in Test Dataset Failed to Classify by All Models
+  ![all_failed_images](assets/images/allfailed_test.png)
+  <i>Figure 5. Images in test dataset failed to classify by all models.</i>
 
 </p>
 

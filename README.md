@@ -203,6 +203,10 @@ CNN_Ocular_Disorders/
   ![all_failed_images](assets/images/allfailed_test.png)
   <i>Figure 5. The images in the test dataset could not be classified by any of the models.</i>
 
+#### Activation Heatmap
+  ![activation heatmap](assets/images/activation_heatmap.png)
+  <i>Figure 6. Activation heatmap</i>
+
 </p>
 
 ### Conclusion

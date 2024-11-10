@@ -1,0 +1,5 @@
+,EfficientNetB3,InceptionV3,Xception,ResNet50
+cataract,0.9917,0.996,0.9919,0.9932
+diabetic_retinopathy,1.0,1.0,0.9998,1.0
+glaucoma,0.9678,0.9655,0.9427,0.963
+normal,0.9669,0.9661,0.9635,0.9717
